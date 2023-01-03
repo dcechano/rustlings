@@ -4,10 +4,12 @@
 // Execute `rustlings hint as_ref_mut` or use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
+use std::convert::AsRef;
 
 // Obtain the number of bytes (not characters) in the given argument.
 // TODO: Add the AsRef trait appropriately as a trait bound.
-fn byte_counter<T>(arg: T) -> usize {
+fn byte_counter<T>(arg: T) -> usize
+where T: AsRef {
     arg.as_ref().as_bytes().len()
 }
 
